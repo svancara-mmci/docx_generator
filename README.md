@@ -53,7 +53,7 @@ contain placeholders for fields that are absent on the current instrument.
 - The template is served through `template.php` in project context — only
   authenticated users with access to the project can download it.
   
-  ## JSON fields (advanced, optional)
+## JSON fields (advanced, optional)
 
 REDCap has no native JSON field type. This setting exists for a specific
 pattern: storing structured data (produced by a custom JavaScript widget,
