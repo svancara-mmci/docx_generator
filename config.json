@@ -1,0 +1,46 @@
+{
+    "name": "DOCX Generator",
+    "namespace": "MMCI\\DocxGenerator",
+    "description": "Generates a Word document from an uploaded .docx template. Placeholders in the template use {field_name} syntax matching project field names. Adds a button on the data entry form that fills the template with current form values (choice fields are exported as labels).",
+    "framework-version": 16,
+    "authors": [
+        {
+            "name": "MMCI",
+            "email": "jan.svancara@mou.cz",
+            "institution": "Masaryk Memorial Cancer Institute"
+        }
+    ],
+    "project-settings": [
+        {
+            "key": "template_file",
+            "name": "Word template (.docx) — placeholders use {field_name} syntax",
+            "type": "file"
+        },
+        {
+            "key": "target_instrument",
+            "name": "Instrument on which the button is shown (leave empty = all instruments)",
+            "type": "instrument-list"
+        },
+        {
+            "key": "filename_field",
+            "name": "Field used as filename prefix (e.g. record identifier)",
+            "type": "field-list"
+        },
+        {
+            "key": "filename_suffix",
+            "name": "Filename suffix (default: export)",
+            "type": "text"
+        },
+        {
+            "key": "button_label",
+            "name": "Button label (default: Generate Word document)",
+            "type": "text"
+        },
+        {
+            "key": "json_fields",
+            "name": "JSON fields (advanced): text/notes fields whose value is a JSON array of objects, e.g. populated by a custom widget or via the API — each item will be rendered as one line in the document. Leave empty if you don't use this pattern.",
+            "type": "field-list",
+            "repeatable": true
+        }
+    ]
+}
